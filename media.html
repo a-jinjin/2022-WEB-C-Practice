@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  *{margin:0; padding:0;}
+
+  /* basic style */
+  #root {
+    width:100vw; 
+    height: 100vh; 
+    background-color: steelblue;
+    transition: 1s;
+  }
+
+  #root > div {
+    width: 50vw;
+    height: 100vh;
+    background-color: #fff;
+  }
+
+
+  /* tablet style */
+  @media (max-width:1028px) {
+  /* 가로폭이 1028px 이하면 배경색을 brown으로 바꿔라 */
+    #root {
+      background-color: brown;
+    }
+
+    #root > div {
+    width: 100vw;
+    height: 70vh;
+    background-color: skyblue;
+    }
+  }
+
+
+  /* mabile style */
+  @media (max-width:480px) {
+  /* 가로폭이 480px 이하면 배경색을 gold로 바꿔라 */
+    #root {
+      background-color: gold;
+    }
+
+    #root > div {
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    }
+  }
+
+
+</style>
+</head>
+
+
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+</body>
+</html>
