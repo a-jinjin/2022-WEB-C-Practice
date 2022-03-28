@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ink ink</title>
+
+  <style>
+    * {margin: 0; padding: 0;}
+
+    :root {
+      --w-55 : 55px;
+    }
+
+
+    #root {width: 100vw; height: 100vh;}
+
+    main {
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      color: #888888;
+    }
+    
+    .test-b {border: 1px solid #888888;}
+    .test-c {background-color: #c4c4c4;}
+
+    .flex {display: flex;}
+    .flex-i-center {align-items: center;}
+    .flex-j-center {justify-content: center;}
+    .flex-col {flex-direction: column;}
+    .flex-end {justify-content: end;}
+    .flex-between {justify-content: space-between;}
+
+
+    .position-re {position: relative;}
+    .position-ab {position: absolute;}
+    .z-0 {z-index: 0;}
+    .z-1 {z-index: 1;}
+    .z-2 {z-index: 2;}
+
+
+    .btn-round {width: 1vh; height: 1vh; border-radius: 1vh; margin: 1vh;}
+    .image {width: 100%; height: 100%;}
+    .txt {width: 70%; height: 10%; text-align: center; margin: 3vh 1vh 5vh 3vh;}
+    .blank {width: 100%; height: 67%;}
+    .btn-slide {width: var(--w-55); height: var(--w-55); border-radius: var(--w-55);}
+    .btn-start {width: var(--w-55); height: var(--w-55); border-radius: var(--w-55); margin: 3vh 3vh 3vh 4vh;}
+
+    /* 태블릿 */
+    @media (min-width:700px) {
+      .image {height: 65vh; width: 100vw; top: 15%}
+      .txt {margin: 3vh 0vh 72vh 0vh; width: 50vw;}
+
+      main > div:nth-child(4) {
+        height: 65vh;
+        position: absolute;
+        top: 15%
+      }
+      
+      main > div:nth-child(4) > div {
+        background-color: lightgray;
+        height: 100%;
+        border-radius: 0;
+      }
+
+      main > div:nth-child(5) {
+        justify-content: center;
+      }
+
+      .btn-start {
+        width: 20vw;
+      }
+
+    }
+
+    /* PC */
+    @media (min-width:1100px) {
+      .image {height: 47vh; width: 100vw; top: 10%}
+      .txt {margin: 60vh 0vh 7vh 0vh; width: 50vw;}
+      
+      main > div:nth-child(2){
+        width: 50vw;
+        left: 15vw;
+        position: relative;
+      }
+      
+      main > div:nth-child(4) {
+        height: 47vh;
+        position: absolute;
+        top: 10%
+      }
+      
+      main > div:nth-child(4) > div {
+        width: 15vw;
+        height: 100%;
+        background-color: lightgray;
+        border-radius: 0;
+        margin: 0;
+      }
+      main > div:nth-child(5) {
+        justify-content: center;
+      }
+      .btn-start {
+        width: 20vw;
+      }
+
+
+    }
+
+  </style>
+
+</head>
+<body>
+  <div id="root">
+  <!-- 크기 -->
+    <main class="position-re">
+    <!-- 정렬상자 -->
+
+      <div class="image test-c position-ab z-0"></div>
+      <div class="flex position-re z-1">
+      <!-- 버튼 세개 -->
+        <div class="btn-round test-b"></div>
+        <div class="btn-round test-b"></div>
+        <div class="btn-round test-b"></div>
+      </div>
+      <div class="flex flex-j-center position-re z-1">
+        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laborum fugiat modi mollitia.</p>
+      </div>
+      <div class="blank flex flex-i-center flex-between position-re z-1">
+      <!-- 좌우버튼 들어갈 영역 -->
+        <div class="btn-slide"></div>
+        <div class="btn-slide"></div>
+      </div>
+      <div class="flex flex-end">
+      <!-- 시작버튼 -->
+        <div class="btn-start position-re z-1 test-b"></div>
+      </div>
+
+    </main>
+  </div>
+
+  </div>
+
+</body>
+</html>
