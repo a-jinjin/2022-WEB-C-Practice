@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <style>
+    *{margin: 0; padding: 0;}
+
+    :root {
+      --w-100 : 100vw;
+      --h-100 : 100vh;
+
+      --color-1 : #fff;
+      --color-2 : #c4c4c4;
+      --color-3 : #888888;
+    }
+
+    #root{
+      width: var(--w-100);
+      height: var(--h-100);
+    }
+    
+    #root > div:nth-child(1) {
+      width: var(--w-100);
+      height: 8vh;
+      background-color: var(--color-1);
+      border-bottom: 1px solid var(--color-2);
+    }
+
+    #root > div:nth-child(1) > p {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: var(--color-3);
+    }
+
+    
+    #root > div:nth-child(2) {
+      width: var(--w-100);
+      height: 10vh;
+      background-color: var(--color-1);
+      padding: 2vh 0 0 0;
+    }
+    #root > div:nth-child(2) > p {
+      width: 90vw;
+      font-size: 1em;
+      color: var(--color-3);
+
+    }
+      
+    #root > div:nth-child(3) {
+      width: var(--w-100);
+      height: 80vh;
+      background-color: var(--color-1);
+    }
+    
+    #root > div:nth-child(3) > div {
+      width: 90vw;
+      height: 19%;
+      border-bottom: 1px solid var(--color-2);
+
+      font-size: 1.2em;
+      font-weight: bold;
+      color: var(--color-3);
+    }
+    
+    
+    /* 정렬 */
+    .flex {display: flex;}
+    .flex-col {flex-direction: column;}
+    .flex-row {flex-direction: row;}
+    .flex-i-center {align-items: center;}
+    .flex-j-center {justify-content: center;}
+    .flex-end {justify-content: end;}
+    
+    /* btn */
+    .mood {
+      width: 10vh; height: 10vh; 
+      border-radius: 10vh; 
+      background-color: var(--color-2);
+      margin-right: 5vw;
+    }
+
+    .mood-t {
+      width: 70vw;
+      height: 12vw;
+    }
+
+
+    /* 태블릿 사이즈 */
+    @media (min-width:800px) {
+    #root > div:nth-child(2) {
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    }
+
+    #root > div:nth-child(3) {
+      flex-direction: row;
+      justify-content: center;
+      height: 70vh;
+
+    }
+
+    #root > div:nth-child(3) > div{
+      flex-direction: column;
+      width: 19vw;
+      height: 70vh;
+      border-right: 1px solid var(--color-2);
+      border-bottom: 0px solid var(--color-2);
+    }
+
+    #root > div:nth-child(3) > div:nth-child(5){
+      border-right: 0px solid var(--color-2);
+    }
+
+    #root > div:nth-child(3) > div > div:nth-child(1){
+      width: 15vh; height: 15vh; 
+      border-radius: 15vh; 
+      margin: 0 0 5vw 0;
+    }
+
+    #root > div:nth-child(3) > div > div:nth-child(2){
+      width: 19vw;
+      height: 40vh;
+      justify-content: center;
+      align-items: start;
+
+    }
+    
+    #root > div:nth-child(3) > div > div:nth-child(2) > p{
+      transform: rotate(90deg);
+      text-align: left;
+    }
+
+  }
+
+  /* PC 사이즈 */
+  @media (min-width:1000px) {
+    #root > div:nth-child(3) > div{
+    width: 15vw;
+    /* background-color: red; */
+    
+    transform: skew(20deg, 0deg);
+
+    }
+
+  }
+
+
+
+
+  </style>
+
+<body>
+  <div id="root" class="flex flex-col">
+  <!-- 크기지정 -->
+      <div class="flex flex-i-center flex-j-center">
+      <!-- 1번 div : 로고 영역-->
+        <p>LOGO</p>
+      </div>
+      <div class="flex flex-j-center">
+      <!-- 2번 div : 상단 텍스트 영역-->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, numquam.</p>
+      </div>
+      <div class="flex flex-col flex-i-center">
+      <!-- 3번 div 기분 (다섯가지) -->
+        <div class="flex flex-i-center">
+          <div class="mood"></div>
+          <div class="mood-t flex flex-i-center"> <p>very good</p> </div>
+        </div>
+        <div class="flex flex-i-center">
+          <div class="mood"></div>
+          <div class="mood-t flex flex-i-center"> <p>good</p> </div>
+        </div>
+        <div class="flex flex-i-center">
+          <div class="mood"></div>
+          <div class="mood-t flex flex-i-center"> <p>normal</p> </div>
+        </div>
+        <div class="flex flex-i-center">
+          <div class="mood"></div>
+          <div class="mood-t flex flex-i-center"> <p>bad</p> </div> 
+        </div>
+        <div class="flex flex-i-center">
+          <div class="mood"></div>
+          <div class="mood-t flex flex-i-center"> <p>terrible</p> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

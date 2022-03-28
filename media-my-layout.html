@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ink ink</title>
+
+  <style>
+    * {margin: 0; padding: 0;}
+
+    #root {width: 100vw; height: 100vh;}
+
+    main {
+      width: 100vw;
+      height: 90vh;
+    }
+    
+    .test-b {border: 1px solid blue;}
+    .test-c {background-color: gray;}
+
+    .flex {display: flex;}
+    .flex-i-center {align-items: center;}
+    .flex-j-center {justify-content: center;}
+    .flex-col {flex-direction: column;}
+
+    .btn-round {
+      width: 1vh; height: 1vh;
+      border-radius: 1vh;
+      margin-right: 0.5vh;
+    }
+
+    .image {
+      width: 100%;
+      height: 70%;
+    }
+
+    .txt {
+      width: 50%;
+      height: 10%;
+    }
+
+    .btn-start {
+      width: 7vw;
+      height: 5%;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div id="root" class="flex flex-i-center">
+    <main class="test-b flex flex-i-center ">
+      <div class="flex">
+        <div class="btn-round test-c"></div>
+        <div class="btn-round test-b"></div>
+        <div class="btn-round test-b"></div>
+      </div>
+      <div class="image test-b"></div>
+      <div class="txt test-c">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus porro quod, ea sit autem iste voluptates nam alias saepe temporibus!</p>
+      </div>
+      <div class="btn-start test-c">START</div>
+    </main>
+
+  </div>
+
+</body>
+</html>
