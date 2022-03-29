@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    #root {width: 100vw; height: 100vh; transition: 1s;}
+
+    header {
+      width: 90vw; height: 5vh;
+      padding: 0 5vw 0 5vw;
+      background-color: gray;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* 작은 아이콘 */
+    .icon {
+      width: 3vh; height: 3vh;
+      border-radius: 3vh;
+      background-color: #fff;
+    }
+
+    main {
+      width: 90vw; height: 80vh;
+      padding: 3vh 5vw 3vh 5vw;
+      background-color: lightgrey;
+
+      overflow: scroll;
+    }
+    
+    /* 트윗영역 - 정렬 */
+    .tweet {margin-bottom: 4vh; display: flex;}
+    /* 트윗-프로필영역 */
+    .tweet-profile {width: 10vw; margin-right: 3vw;}
+    /* 트윗-글씨영역  */
+    .tweet-txt {width: 77vw;}
+    /* 트윗-프로필사진 */
+    .icon-p {
+      width: 7vh; height: 7vh;
+      border-radius: 7vh;
+      background-color: #fff;
+    }
+
+    #retweet {
+      width: 100%; height: 3vh;
+      background-color: #fff;
+      margin-top: 2vh;
+    }
+
+    footer {
+      width: 90vw; height: 5vh;
+      padding: 0 5vw 0 5vw;
+      background-color: gray;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 글씨 스타일 */
+    .bold {font-weight: bold;}
+    .txt-gray {font-weight:normal; color: gray;}
+
+
+
+    /* 태블릿 */
+    @media(min-width: 800px){
+      #root {display: flex; justify-content: space-between; position:absolute; overflow: hidden;}
+      
+      #tweet {
+        width: 89vw; height: 100vh;
+
+        position: absolute;
+        right: 0;
+      }
+
+      header {
+      width: 89%; height: 5vh;}
+
+      main {
+      width: 100%; height: 95vh;}
+
+      .tweet-txt {width: 77%;}
+
+      footer {
+        padding: 5vh 2vw 7vh 4vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        position:absolute;
+        left: 0;
+        width: 7vw;
+        height: 95vh;
+      }
+
+      footer > div {
+        margin-bottom: 3vh;
+      }
+    }
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <!-- 전체 크기지정 -->
+  <div id="root">
+    <!-- 트윗 영역 -->
+    <div id="tweet">
+
+      <!-- 상단(고정) -->
+      <header>
+        <div class="icon"></div>
+        <p>최신트윗</p>
+        <div class="icon"></div>
+      </header>
+      
+      <!-- 컨텐츠 영역 -->
+      <main>
+        <!-- 트윗 -->
+        <div class="tweet">
+          <!-- 프로필사진 -->
+          <div class="icon-p tweet-profile"></div>
+          <!-- 트윗 영역 -->
+          <section class="tweet-txt">
+            <p class="bold">멋쟁이토마토 <span class="txt-gray">@im_tomato</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio porro vitae assumenda enim eius explicabo, error nulla! Non praesentium accusamus ab ex vitae unde dolorum cupiditate reprehenderit, voluptate deserunt ipsa?</p>
+            <div id="retweet"></div>
+          </section>
+        </div>
+        <!-- 트윗 (복사/붙여넣기) -->
+        <div class="tweet">
+          <!-- 프로필사진 -->
+          <div class="icon-p tweet-profile"></div>
+          <!-- 트윗 영역 -->
+          <section class="tweet-txt">
+            <p class="bold">멋쟁이토마토 <span class="txt-gray">@im_tomato</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio porro vitae assumenda enim eius explicabo, error nulla! Non praesentium accusamus ab ex vitae unde dolorum cupiditate reprehenderit, voluptate deserunt ipsa?</p>
+            <div id="retweet"></div>
+          </section>
+        </div>
+        <div class="tweet">
+          <!-- 프로필사진 -->
+          <div class="icon-p tweet-profile"></div>
+          <!-- 트윗 영역 -->
+          <section class="tweet-txt">
+            <p class="bold">멋쟁이토마토 <span class="txt-gray">@im_tomato</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio porro vitae assumenda enim eius explicabo, error nulla! Non praesentium accusamus ab ex vitae unde dolorum cupiditate reprehenderit, voluptate deserunt ipsa?</p>
+            <div id="retweet"></div>
+          </section>
+        </div>
+        <div class="tweet">
+          <!-- 프로필사진 -->
+          <div class="icon-p tweet-profile"></div>
+          <!-- 트윗 영역 -->
+          <section class="tweet-txt">
+            <p class="bold">멋쟁이토마토 <span class="txt-gray">@im_tomato</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio porro vitae assumenda enim eius explicabo, error nulla! Non praesentium accusamus ab ex vitae unde dolorum cupiditate reprehenderit, voluptate deserunt ipsa?</p>
+            <div id="retweet"></div>
+          </section>
+        </div>
+        <div class="tweet">
+          <!-- 프로필사진 -->
+          <div class="icon-p tweet-profile"></div>
+          <!-- 트윗 영역 -->
+          <section class="tweet-txt">
+            <p class="bold">멋쟁이토마토 <span class="txt-gray">@im_tomato</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio porro vitae assumenda enim eius explicabo, error nulla! Non praesentium accusamus ab ex vitae unde dolorum cupiditate reprehenderit, voluptate deserunt ipsa?</p>
+            <div id="retweet"></div>
+          </section>
+        </div>
+        <div class="tweet">
+          <!-- 프로필사진 -->
+          <div class="icon-p tweet-profile"></div>
+          <!-- 트윗 영역 -->
+          <section class="tweet-txt">
+            <p class="bold">멋쟁이토마토 <span class="txt-gray">@im_tomato</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio porro vitae assumenda enim eius explicabo, error nulla! Non praesentium accusamus ab ex vitae unde dolorum cupiditate reprehenderit, voluptate deserunt ipsa?</p>
+            <div id="retweet"></div>
+          </section>
+        </div>
+        <div class="tweet">
+          <!-- 프로필사진 -->
+          <div class="icon-p tweet-profile"></div>
+          <!-- 트윗 영역 -->
+          <section class="tweet-txt">
+            <p class="bold">멋쟁이토마토 <span class="txt-gray">@im_tomato</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio porro vitae assumenda enim eius explicabo, error nulla! Non praesentium accusamus ab ex vitae unde dolorum cupiditate reprehenderit, voluptate deserunt ipsa?</p>
+            <div id="retweet"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+    
+    <!-- 하단(고정) 영역 -->
+    <footer>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+    </footer>
+  </div>
+</body>
+</html>
