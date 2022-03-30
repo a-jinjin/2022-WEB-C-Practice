@@ -1,0 +1,192 @@
+*{margin: 0; padding: 0;}
+
+    #kaweco {
+      width: 100vw; height: 100vh;
+      overflow: scroll;
+      /* !! 가로 스크롤이 생기는 이유 !!
+      overflow를 scroll로 변경하면 width값이 100vw인데도 가로 스크롤바가 생김 
+      (브라우저의 스크롤바 크기 때문인 것으로 추정)
+      overflow를 hidden으로 변경하면 해결되지만, 하단의 컨텐츠가 있기 때문에
+      우선 overflow : scroll로 작업함 */
+    }
+
+    /* ----------- 상단의 메뉴 영역 --------------------------------------- */
+    #kaweco > section:nth-child(1) {
+      width: 100vw; height: 10vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: black;
+    }
+
+    /* ----------- 메뉴영역에 들어갈 메뉴들 (로고, 메뉴, 언어설정 등) ------- */
+    #kaweco > section:nth-child(1) > div {
+      height: 60%;
+      margin: 1vh;
+    }
+
+    /* 로고영역 */
+    #kaweco > section:nth-child(1) > div:nth-child(1) > img {
+      height: 100%;
+      object-fit: scale-down;
+    }
+
+    /* 메뉴이름 */
+    #kaweco > section:nth-child(1) > div:nth-child(2){
+      height: 60%;
+      display: flex;
+      align-items: center;
+    }
+
+    #kaweco > section:nth-child(1) > div:nth-child(2) > h3 {
+      color: #c4c4c4;
+      margin-left: 1vh;
+    }
+
+
+    /* 장바구니 */
+    #kaweco > section:nth-child(1) > div:nth-child(3){
+      height: 60%;
+      display: flex;
+      align-items: center;
+    }
+
+    #kaweco > section:nth-child(1) > div:nth-child(3) > div {
+      width: 2.5vw; height: 2.5vw;
+      margin-left: 1vw;
+      border-radius: 2.5vw;
+      border: 1px solid #ffffff;
+    }
+
+    /* 언어설정 */
+    #kaweco > section:nth-child(1) > div:nth-child(4){
+      display: flex;
+      align-items: center;
+    }
+
+    #kaweco > section:nth-child(1) > div:nth-child(4) > div {
+      width: 2.5vw; height: 2.5vw;
+      margin-left: 1vw;
+      border-radius: 2.5vw;
+      background-color: #ffffff;
+    }
+    
+
+
+    
+    
+    /* ----------- 이미지 영역 ------------------------------------------- */
+    #kaweco > section:nth-child(2) {
+      height: 25vh;
+      background-color: lightgray;
+    }
+    
+    /* -----------새로 나온 제품 사진 영역 -------------------------------- */
+    #kaweco > section:nth-child(3) {
+      width: 100vw; height: 25vh;
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* 정렬을 위한 가상의 박스 */
+    #kaweco > section:nth-child(3) > main {
+      width: 80vw; height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #kaweco > section:nth-child(3) > main > div {
+      width: 23vw; height: 18vh;
+      background-color: #c4c4c4;
+      color: #c4c4c4;
+      padding: 1vh;
+    }
+    
+    #kaweco > section:nth-child(3) > main > div:hover {
+      color: black;
+      background-color: #888888;
+    }
+    
+    .txt-bold {font-size: 1.2em; font-weight: bold; line-height: 2em;}
+    
+    /* ----------- 진행중인 이벤트 영역 --------------------------------- */
+    #kaweco > section:nth-child(4) {
+      width: 100vw; height: 40vh;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3vh;
+    }
+    
+    #kaweco > section:nth-child(4) > main {
+      width: 80vw; height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #kaweco > section:nth-child(4) > main > div {
+      width: 37vw; height: 34vh;
+      background-color: #c4c4c4;
+      padding: 2vh 1vh 1vh 1vh;
+    }
+    
+    #kaweco > section:nth-child(4) > main > div > div:nth-child(2){
+      width: 40%; height: 10%;
+      background-color: #fff;
+      border-radius: 1vh;
+      margin-top: 2vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    
+    /* ----------- 하단 컨텍트 영역 ---------------------------------- */
+    #kaweco > section:nth-child(5) {
+      width: 100vw; height: 25vh;
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      color: #c4c4c4;
+    }
+    
+    #kaweco > section:nth-child(5) > main {
+      width: 80vw; 
+      margin-top: 2vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    #kaweco > section:nth-child(5) > main > p:nth-child(2){margin: 0vh 0 2vh 0;}
+    #kaweco > section:nth-child(5) > main > p{margin: 2vh 0 1vh 0;}
+    
+    #kaweco > section:nth-child(5) > main > article {
+      width: 60%; height: 5vh;
+      padding: 0.5vh;
+      border-radius: 0.5vh;
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+    }
+    
+    #kaweco > section:nth-child(5) > main > article > div {
+      color: gray;
+      padding-left: 1vh;
+      text-align: left;
+    }
+    
+    #kaweco > section:nth-child(5) > main > article > div:nth-child(2) {
+      font-weight: bold;
+      text-align: center;
+      background-color: black;
+      border-radius: 1vh;
+      padding: 1vh;
+    }
+    
+    /* ----------- 하단 컨텍트영역의 이메일 창 비율설정을 위한 class -- */
+    .grow-1{flex-grow: 1;}
+    .grow-3{flex-grow: 3;}
