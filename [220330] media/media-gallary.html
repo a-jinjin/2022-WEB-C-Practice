@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@media 복습</title>
+
+  <style>
+
+    *{margin: 0; padding: 0;}
+
+    #root {width: 100vw; height: 100vh;}
+
+    /* ========================== 상단 영역 ========================== */
+    #root > div:nth-child(1) {
+      width: 100vw; height: 10vh;
+    }
+
+    /* 상단 로고 들어갈 영역 */
+    #root > div:nth-child(1) > header {
+      width: 100vw; height: 10vh;
+      background-color: black;
+    }
+
+    /* 모바일에서는 숨겨놓을 메뉴바 */
+    #root > div:nth-child(1) > section {
+      width: 100vw; height: 10vh;
+      background-color: white;
+    }
+
+
+    /* ======================== 내용물 영역 ========================== */
+    #root > div:nth-child(2) {
+      width: 100vw; height: 90vh;
+      background-color: #ffffff;
+    }
+    
+    #root > div:nth-child(2) > div {
+      width: 100%; height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    #root > div:nth-child(2) > div > article {
+      width: 47%; height: 23%;
+      margin: 0 1% 0 1%;
+      border-radius: 1vh;
+      background-color: #c4c4c4;
+    }
+
+
+    /* 800px 이상 태블릿 사이즈 */
+    @media(min-width:800px) {
+      /* ========================== 상단 영역 ========================== */
+      #root > div:nth-child(1) {
+        width: 100vw; height: 25vh;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* 상단 로고 들어갈 영역 */
+      #root > div:nth-child(1) > header {
+        width: 100vw; height: 10vh;
+        background-color: black;
+      }
+
+      /* 모바일에서는 숨겨놓을 메뉴바 */
+      #root > div:nth-child(1) > section {
+        width: 100vw; height: 15vh;
+        background-color: #888888;
+      }
+
+      /* ======================== 내용물 영역 ========================== */
+      #root > div:nth-child(2) {
+        width: 100vw; height: 75vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #root > div:nth-child(2) > div {
+        width: 85%; height: 95%;
+      }
+
+      #root > div:nth-child(2) > div > article {
+        width: 22%; height: 47%;
+      }
+    
+    }
+
+    /* 1200px 이상 태블릿 사이즈 */
+    @media(min-width:1200px) {
+      #root {
+        width: 100vw; height: 100vh;
+        display: flex;
+      }
+
+
+      /* ========================== 상단 영역 ========================== */
+      #root > div:nth-child(1) {
+        width: 20vw; height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* 상단 로고 들어갈 영역 */
+      #root > div:nth-child(1) > header {
+        width: 20vw; height: 10vh;
+      }
+
+      /* 모바일에서는 숨겨놓을 메뉴바 */
+      #root > div:nth-child(1) > section {
+        width: 20vw; height: 90vh;
+      }
+
+      /* ======================== 내용물 영역 ========================== */
+      #root > div:nth-child(2) {
+        width: 80vw; height: 100vh;
+      }
+
+      #root > div:nth-child(2) > div {
+        width: 80%; height: 90%;
+      }
+
+    }
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <div id="root">
+    <!-- 메뉴영역 -->
+    <div>
+      <!-- 상단 -->
+      <header></header>
+      <!-- 메뉴 -->
+      <section></section>
+    </div>
+    <!-- 내용물 영역 -->
+    <div>
+      <div>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
