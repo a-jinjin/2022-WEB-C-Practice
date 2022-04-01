@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    #root{
+      width: 100vw; height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #root > article:nth-child(1) {
+      width: 45vw; height: 45vh;
+      background-color:  rgb(163, 49, 41);
+      /* mix-blend-mode: multiply; */
+      /* 이미지에 블랜딩모드를 추가 : 포토샵/일러스트에 있는 블랜딩모드는 다 사용할 수 있다고 보면 된다. */
+      position: absolute;
+      top:5vh; left:5vh;
+    }
+    
+    #root > article:nth-child(1) img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      mix-blend-mode: multiply;
+      /* 블랜딩모드를 사용하니 사진의 느낌은 마음에 들게 바뀌었으나 배경이 투명해져 뒷배경의 글씨가 비쳐보였다.
+      뒷배경의 글씨가 보이지 않게 하고 싶었기 때문에, article:nth(1)에 배경과 같은 색상값을 설정하고 article:nth(1)>img에 블랜딩모드를 적용했다. */
+    }
+    
+    #root > article:nth-child(2) {
+      width: 100vw; height: 100vh;
+      background-color: rgb(163, 49, 41);
+    }
+
+    #root > article:nth-child(2) > p {
+      font-size: 8rem;
+      font-family: 'Abril Fatface', cursive;
+      /* 두꺼운 느낌의 세리프체는 어떤 느낌일지 궁금해서 웹폰트를 넣어봤다. */
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- 전체영역 -->
+  <div id="root">
+    <!-- 위로 올라올 이미지 -->
+    <article>
+      <img src="https://static.toiimg.com/photo/msid-68902768/68902768.jpg?1493630" alt="">
+    </article>
+    <!-- 배경용 이미지 (텍스트가 들어있는 배경) -->
+    <article>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, Lorem ipsum dolor sit. eligendi!</p>
+    </article>
+    </container>
+  </div>
+</body>
+</html>
