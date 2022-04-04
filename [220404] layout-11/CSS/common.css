@@ -1,0 +1,68 @@
+*{margin:0; padding: 0;}
+
+  :root {
+    --color-1: rgb(226, 226, 226);
+    --color-2: rgb(105, 105, 105);
+    
+  }
+
+  #root {
+    width: 100vw; height: 100vh;
+    background-color: var(--color-2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  #root > nav:nth-child(1) {
+    width: 100%; height: 10vh;
+    background-color: var(--color-1);
+    position: fixed;
+    top:0;
+    mix-blend-mode: multiply;
+  }
+
+  #root > nav:nth-child(2) {
+    width: 100%; height: 30vh;
+    background-color: var(--color-1);
+    display: flex;
+    mix-blend-mode: soft-light;
+    position: fixed;
+    top:0
+  }
+
+  #root > div:nth-child(3) {
+    width: 100%; height: 100%;
+    background-color: rgb(121, 120, 136);
+    overflow: hidden;
+    /* 이미지의 세로 사이즈가 화면크기보다 커서 스크롤이 생기는 것을 방지하기 위해 overflow:hidden을 적용했다. */
+  }
+  
+  #root > div:nth-child(3) > img {
+    background-size: cover;
+    /* 이미지의 크기를 화면 크기에 맞추기 위해 cover를 적용했다. */
+    /* 궁금한 점 : 이미지의 크기가 작은 경우 cover로 이미지의 크기를 화면에 맞출 수 있는데,
+    이미지의 크기가 화면보다 큰 경우에는 이미지가 줄어드는 것이 아니라 잘려져서 나옵니다.
+    background-repeat이나 max-width 등의 속성도 사용해봤는데 해결되지 않아서 더 작은 이미지를
+    넣는 것으로 타협했습니다. */
+    mix-blend-mode: soft-light;
+  }
+  
+
+  .menu-contain {
+    list-style: none;
+    flex-grow: 1;
+    line-height: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-2);
+  }
+
+
+  .items{
+    line-height: 1.5rem;
+    font-weight: normal;
+    
+  }
