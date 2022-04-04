@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    #root {
+      border: 1px solid rebeccapurple;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root > div {
+      flex-grow: 1;
+      /* width값을 대신하는 것. '비율' ==> 자식에 넣어야 한다. */
+      /* width: 100px;  */
+      height: 100px;
+      background-color: tomato;
+    }
+
+    #root > div:nth-child(3) {
+      flex-grow: 3;
+      background-color: orange;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+  
+  <div id="root">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+
+</body>
+</html>
