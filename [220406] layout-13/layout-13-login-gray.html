@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    #container {
+      width: 100vw; height: 100vh;
+      background-color: gray;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+
+/* ================= 내용 영역 */
+    main {
+      width: 100vw; height: 55vh;
+      background-color: #fff;
+      border-radius: 3vh 3vh 0 0;
+      padding : 3vh;
+    }
+
+
+/* ================= 텍스트 스타일 */
+    .p-big {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .p-small {
+      font-size: 0.7rem;
+    }
+
+
+    /* 동그란 버튼 다섯개 */
+    #container > main > div:nth-child(2) { 
+      width: 100%; height: 1vh;
+      padding-left: 3vw;
+      margin: 1vh 0 3vh 0;
+      display: flex;
+    }
+
+    #container > main > div:nth-child(2) > div{ 
+      width: 1vh; height: 1vh;
+      border-radius: 1vh;
+      background-color: lightgray;
+      margin-right: 1vh;
+    }
+
+    /* 색이 다른 동그라미 하나 */
+    #container > main > div:nth-child(2) > div:nth-child(1){ 
+      background-color: gray;
+    }
+
+    /* input이 들어갈 영역 */
+    #container > main > section {
+      width: 100%; height: 8vh;
+    }
+
+    #container > main > section > p {
+      margin-left: 3vw;
+    }
+
+    #container > main > section > input {
+      width: 100%;
+      background-color: lightgray;
+      border: none;
+      padding: 1vh 0 1vh 0;
+      
+      /* 패딩값으로 내부여백을 주니까 패딩값이 가로값과 합쳐서 영역 밖으로 벗어납니다. 
+      패딩값과 가로비율을 맞춰서 길이를 통일하자니 계산이 너무 복잡할 것 같았습니다.
+      input의 vlaue에 띄어쓰기를 해서 (value="  Lorem, ipsum dolor") 왼쪽 여백이 있는 것처럼 연출했습니다. */
+
+      border-radius: 1vh;
+      color:gray;
+    }
+
+    /* 두번째 input 아래에 들어가는 작은 텍스트 */
+    #container > main > section:nth-child(4) > p:nth-child(3) {
+      text-align: right;
+    }
+
+/* ================= 버튼 들어갈 영역 */
+    #container > main > div:nth-child(5) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 5vh;
+    }
+
+    #container > main > div:nth-child(5) > button {
+      width: 30vw;
+      padding: 1vh;
+      border: none;
+      border-radius: 3vh;
+      background-color: lightgray;
+    }
+
+    #container > main > div:nth-child(5) > p {
+      margin-right: 3vw;
+    }
+
+/* ================= 하단의 바 */
+    #container > div:nth-child(2) {
+      width: 40%; height: 1vh;
+      border-radius: 1vh;
+      background-color: gray;
+      position:absolute;
+      bottom: 1vh;
+    }
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  
+  <div id="container">
+    <main>
+      <!-- 제목 -->
+      <header>
+        <p class="p-big">Lorem, ipsum.</p>
+      </header>
+
+      <!-- 동그라미 다섯개 -->
+      <div>
+        <!-- 색 다른 하나 -->
+        <div></div>
+        <!-- 이하 같은 색 넷 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <!-- 아이디 -->
+      <section>
+        <p>Lorem</p>
+        <input type="text" value="   Lorem, ipsum dolor">
+        
+      </section>
+
+      <!-- 비밀번호 -->
+      <section>
+        <p>Lorem</p>
+        <input type="text" value="   Lorem, ipsum dolor">
+        <p class="p-small">Lorem, ipsum dolor</p>
+      </section>
+
+      <div>
+        <button>welcome</button>
+        <p class="p-small">welcome</p>
+      </div>
+
+      
+    </main>
+    
+    <div></div>
+
+  </div>
+
+
+</body>
+</html>

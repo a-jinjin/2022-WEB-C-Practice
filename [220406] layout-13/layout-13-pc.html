@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    #root {
+      width: 100vw; height: 100vh;
+      background-image: url(https://images.unsplash.com/photo-1649083048428-3d8ed23a3ce0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      position: relative;
+    }
+
+
+
+/* 컨텐츠 영역 */
+    #root > div:nth-child(1) {
+      width: 80vw; height: 60vh;
+      /* background-color: white; */
+      position: absolute;
+      z-index: 1;
+      bottom: 10vh;
+    }
+
+
+  /* 구분선 위 컨텐츠 영역 */
+    #root > div:nth-child(1) > main {
+      width: 100%; height: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* 사진 영역 */
+    #root > div:nth-child(1) > main > div:nth-child(1) {
+      width: 20%; height: 100%;
+      border-radius: 3vw;
+      /* background-color: lightgray; */
+      background-image: url(https://images.unsplash.com/photo-1648737963059-59ec8e2d50c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+      background-size: cover;
+      box-shadow: 0.5vh 0.5vh 1vh rgb(143, 136, 126);
+    }
+
+    .p-large {font-size: 3rem;}
+    .p-bold {font-weight: bold;}
+    .p-height {line-height: 1.7rem;}
+
+    /* 텍스트 영역 */
+    #root > div:nth-child(1) > main > div:nth-child(2){
+      width: 78%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    /* 큰제목 */
+    #root > div:nth-child(1) > main > div:nth-child(2) > p:nth-child(1) {
+      color: rgb(173, 123, 66);
+    }
+
+    /* 동그라미들 영역지정 */
+    #root > div:nth-child(1) > main > div:nth-child(2) > div:nth-child(2) {
+      width: 100%; height: 10%;
+      margin: 2vh 0 2.5vh 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* 동그라미들 스타일 일괄지정*/
+    #root > div:nth-child(1) > main > div:nth-child(2) > div:nth-child(2) > div{
+      width: 1vh; height: 1vh;
+      border-radius: 1vh;
+      margin-right: 1vh;
+      background-color: rgba(255, 255, 255, 0.438);
+    }
+    
+    /* 첫번째 동그라미만 색상 다르게 */
+    #root > div:nth-child(1) > main > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+      background-color: rgba(255, 255, 255, 0.767);
+    }
+
+
+    #root > div:nth-child(1) > div:nth-child(2) {
+      width: 100%; height: 1vh;
+      border-radius: 1vh;
+      background-color: rgba(255, 255, 255, 0.438);
+      margin: 2vh 0 2vh 0;
+    }
+
+
+
+/* 배경 영역 */
+    #root > div:nth-child(2) {
+      width: 100vw; height: 52vh;
+      background-color: rgba(168, 165, 162, 0.774);
+      mix-blend-mode: screen;
+      position: relative;
+      z-index: 0;
+    }
+
+
+  </style>
+
+</head>
+
+
+
+<body>
+  <div id="root">
+    <!-- root > div(1) z-index 1 컨텐츠 영역-->
+    <div>
+      <main>  
+        <!-- 사진 -->
+        <div></div>
+        <!-- 텍스트 -->
+        <div>
+          <p class="p-large p-bold">Lorem ipsum</p>
+          <!-- 버튼 다섯개 -->
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <p class="p-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore alias sapiente repellat. Animi, modi. Facilis, minus fuga at tempora, neque dolorum, et ea labore quisquam illo nulla quidem veniam nobis!</p>
+        </div>
+      </main>
+      
+      <!-- 구분선 -->
+      <div></div>
+
+      <!-- 텍스트 -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur illum quod earum ipsa magnam magni! Laudantium officia quae voluptate esse eligendi voluptas? Ratione excepturi consectetur, voluptate, ab deleniti vel reiciendis dolor reprehenderit temporibus doloremque inventore? Quo recusandae laudantium blanditiis ullam eum ducimus corporis reiciendis, accusantium nobis placeat, ad numquam quibusdam similique? Quam inventore explicabo illo voluptatum doloremque iusto enim illum placeat nostrum, non corrupti repudiandae velit magnam excepturi officia ullam odit fugit impedit! Aspernatur nostrum, deleniti laboriosam dolore nemo dolores iusto error in veniam magnam enim hic fuga odit quidem a aliquam reiciendis quae, repellat nobis! Aliquid consectetur voluptates dignissimos blanditiis inventore placeat quasi ipsum temporibus deserunt officia tempora ea reprehenderit atque expedita corrupti quo dolore eius accusantium, consequatur facilis incidunt doloribus amet! Quas, temporibus optio. Aliquid eum distinctio, quaerat fugit doloremque aperiam numquam, soluta consequatur repudiandae vero ex animi quam, maiores reprehenderit omnis error. Quibusdam est, tenetur minima cumque blanditiis maxime cupiditate, doloribus eius recusandae eligendi non quo. Ad non maxime nesciunt omnis illum in eligendi recusandae vel? Quae necessitatibus aspernatur culpa laboriosam libero. Nemo deserunt facere quam pariatur et vitae minima repellat distinctio natus recusandae nulla obcaecati aliquid dolores voluptate, corrupti quos nam alias aliquam architecto, sapiente tenetur.</p>
+
+    </div>
+    <!-- root > div(2) z-index 0 반투명 박스-->
+    <div></div>
+  </div>
+</body>
+</html>
