@@ -1,0 +1,32 @@
+.btn-on {
+  border: none;
+  border-radius: 1vh;
+  padding: 1vh 2vw 1vh 2vw;
+  color: white;
+  background-color: var(--color-2);
+  font-size: 1.2rem;
+}
+
+.input-txt {
+  border: none;
+  background-color: white;
+  padding: 2% 4% 2% 4%;
+  font-size: 0.7rem;
+  color: var(--color-2);
+}
+
+.p-large {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.p-small {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
