@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 login</title>
+
+  <style>
+    *{margin:0; padding:0;}
+
+    :root{
+      --color-1: rgb(158, 86, 206);
+      --color-2: rgb(200, 136, 243);
+    }
+
+    #root {
+      width: 100vw; height: 100vh;
+      background-color: var(--color-1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #root > header {
+      width: 90vw; height: 30vh;
+      margin: 5vw;
+      border: 1px solid white;
+    }
+    #root > main {
+      width: 90vw; height: 30vh;
+      padding: 5vw;
+
+    }
+
+    #root > main > div {
+      width: 100%; height: 25%;
+    }
+
+    #root > main > div:nth-child(2) {
+      height: 30%;
+    }
+
+    #root > main > div > input {
+      width: 92%;
+    }
+
+    #root > main > div > button {
+      width: 80%; height: 60%;
+    }
+
+    .btn-on {
+      border: none;
+      border-radius: 1vh;
+      padding: 1vh 2vw 1vh 2vw;
+      color: white;
+      background-color: var(--color-2);
+      font-size: 1.2rem;
+    }
+
+    .input-txt {
+      border: none;
+      background-color: white;
+      padding: 2% 4% 2% 4%;
+      font-size: 0.7rem;
+      color: var(--color-2);
+    }
+
+    .p-large {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .p-small {
+      color: white;
+      font-size: 0.7rem;
+    }
+
+    .flex-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+  
+  <div id="root">
+    <!-- 로고 영역 -->
+    <header></header>
+    <!-- 아이디와 비밀번호 -->
+    <main>
+      <!-- 아이디 -->
+      <div>
+        <p class="p-large">ID</p>
+        <input type="text" class="input-txt" value="Please type to string">
+      </div>
+      <!-- 비밀번호 -->
+      <div>
+        <p class="p-large">PASSWORD</p>
+        <input type="text" class="input-txt" value="Please type to string and number">
+        <p class="p-small">Lorem, ipsum dolor.</p></div>
+      <!-- 버튼 -->
+      <div class="flex-right">
+        <button class="btn-on">Sign in</button>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
