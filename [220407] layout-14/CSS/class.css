@@ -1,3 +1,4 @@
+/* login페이지의 버튼 */
 .btn-on {
   border: none;
   border-radius: 1vh;
@@ -7,6 +8,8 @@
   font-size: 1.2rem;
 }
 
+
+/* input 스타일 */
 .input-txt {
   border: none;
   background-color: white;
@@ -15,6 +18,8 @@
   color: var(--color-2);
 }
 
+
+/* p 스타일링 */
 .p-big {
   color: white;
   font-size: 2rem;
@@ -37,7 +42,6 @@
   color: white;
 }
 
-
 .p-small {
   color: white;
   font-size: 0.7rem;
@@ -46,4 +50,43 @@
 .flex-right {
   display: flex;
   justify-content: flex-end;
+}
+
+
+/* web-unit 영역의 전체 박스 */
+.web-unit {
+  width: 90%; height: 30vh;
+  padding: 8% 5% 8% 5%;
+  margin-top: 1vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* web-unit 영역의 소제목 */
+.web-unit-title {
+  width: 94%;
+  padding-left: 3%;
+}
+
+/* web-unit 영역의 구분선 */
+.web-unit-border {
+  width: 100%; height: 9%;
+  border-bottom: 1px solid var(--color-2);
+  margin-bottom: 5vh;
+}
+
+/* 추가하기 아이콘 */
+.i-plus {
+  width: 5vh; height: 5vh;
+  margin-top: 4vh;
+  border: 4px solid white;
+  border-radius: 5vh;
+}
+
+/* 네비게이션 아이콘 */
+.i-nav {
+  width: 5vh; height: 5vh;
+  border-radius: 4vh;
+  background-color: var(--color-2);
 }

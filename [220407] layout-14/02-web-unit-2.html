@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 QR CODE</title>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/class.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+
+
+  <style>
+    #root{
+      width: 100vw; height: 100vh;
+      background-color: var(--color-1);
+      display: flex;
+    }
+    
+/* ================== 왼쪽 네비게이션 영역 */
+    #root > nav {
+      width: 20vw; height: 100vh;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 아이콘 정렬하기 위한 가상의 박스 */
+    #root > nav > div {
+      width: 100%; height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* nav 안에 들어가는 아이콘은 계속해서 사용할 것이기 때문에 class로 변경한 뒤 외부스타일시트로 연결했습니다.*/
+    
+
+/* ================== 오른쪽 영역 */
+    #root > main {
+      width: 70vw; height: 93vh;
+      padding: 7vh 5vw 0 5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      /* web unit을 네다섯개 혹은 그 이상으로 추가했을 때 스크롤이 생기는 것을 방지하기 위해 overflow:hidden을 적용했습니다. */
+    }
+
+    /* Web unit 박스영역 : class로 처리 (외부스타일시트로 연결)
+    ==> 몇개가 되었든 계속해서 추가될 요소이기 때문에 class로 처리하고 외부스타일시트로 연결했습니다.*/
+    
+    
+    /* 추가 아이콘 또한 class로 처리하여 외부스타일시트로 연결했습니다. */
+    
+
+
+  </style>
+
+</head>
+
+
+<body>
+  
+  <div id="root">
+    <!-- 좌측 메뉴바 -->
+    <nav>
+      <!-- 가운데정렬용 안보이는 div -->
+      <div>
+        <!-- 아이콘 -->
+        <div class="i-nav"></div>
+        <div class="i-nav"></div>
+        <div class="i-nav"></div>
+        <div class="i-nav"></div>
+        <div class="i-nav"></div>
+      </div>
+    </nav>
+
+    <!-- 내용영역 -->
+    <main>
+      <!-- web unit -->
+      <div class="web-unit">
+        <div class="web-unit-border">
+          <p class="p-large-vio web-unit-title">Web unit</p>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui perferendis neque doloribus obcaecati et. Architecto totam ipsa accusamus in sit velit a, laudantium excepturi, dicta suscipit odit, earum error accusantium.</p>
+      </div>
+      
+      <!-- web unit 2 -->
+      <div class="web-unit">
+        <div class="web-unit-border">
+          <p class="p-large-vio web-unit-title">Web unit</p>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui perferendis neque doloribus obcaecati et. Architecto totam ipsa accusamus in sit velit a, laudantium excepturi, dicta suscipit odit, earum error accusantium.</p>
+      </div>
+      <!-- + 아이콘 -->
+      <div class="i-plus"></div>
+    </main>
+
+  </div>
+
+</body>
+</html>
