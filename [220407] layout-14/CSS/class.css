@@ -15,11 +15,28 @@
   color: var(--color-2);
 }
 
+.p-big {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 .p-large {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
 }
+
+.p-large-vio {
+  color: var(--color-1);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.p-mid {
+  color: white;
+}
+
 
 .p-small {
   color: white;

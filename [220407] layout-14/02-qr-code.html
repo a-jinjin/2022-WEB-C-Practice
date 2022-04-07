@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 QR CODE</title>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/class.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+
+
+  <style>
+    #root{
+      width: 100vw; height: 100vh;
+      background-color: var(--color-1);
+      display: flex;
+    }
+    
+/* ================== 왼쪽 네비게이션 영역 */
+    #root > nav {
+      width: 20vw; height: 100vh;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 아이콘 정렬하기 위한 가상의 박스 */
+    #root > nav > div {
+      width: 100%; height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* 아이콘 */
+    #root > nav > div > div {
+      width: 5vh; height: 5vh;
+      border-radius: 4vh;
+      background-color: var(--color-2);
+    }
+
+/* ================== 오른쪽 영역 */
+    #root > main {
+      width: 70vw; height: 90vh;
+      padding: 5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* lecture 정렬 */
+    #root > main > p {
+      margin-bottom: 1vh;
+    }
+
+    /* 동그란 아이콘과 글씨 들어갈 영역 */
+    #root > main > div:nth-child(2) {
+      width: 100%; height: 2vh;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 동그라미 (온에어?) 아이콘 */
+    #root > main > div:nth-child(2) > div {
+      width: 1.5vh; height: 1.5vh;
+      margin-right: 3vw;
+      border-radius: 1.5vh;
+      background-color: limegreen;
+    }
+
+    /* 큐알코드 들어갈 영역 */
+    #root > main > div:nth-child(3) {
+      width: 100%; height: 35vh;
+      margin-top: 8vh;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* 큐알코드 */
+    #root > main > div:nth-child(3) > div{
+      width: 14vh; height: 14vh;
+      background-color: var(--color-2);
+    }
+
+
+  </style>
+
+</head>
+
+
+<body>
+  
+  <div id="root">
+    <!-- 좌측 메뉴바 -->
+    <nav>
+      <!-- 가운데정렬용 안보이는 div -->
+      <div>
+        <!-- 아이콘 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <!-- 내용영역 -->
+    <main>
+      <p class="p-big">LECTURE</p>
+      <div>
+        <!-- 동그라미 -->
+        <div></div>
+        <p class="p-mid">web publishing C</p>
+      </div>
+      <div>
+        <!-- QR코드가 들어갈 이미지 영역이지만 일단 div로 처리해둠 -->
+        <div></div>
+        <p class="p-large-vio">QRCODE CHECK</p>
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
