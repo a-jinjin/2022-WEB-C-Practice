@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>div div</title>
+
+  <style>
+    *{padding: 0; margin: 0;}
+
+    #root {
+      width: 100vw; height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(223, 203, 255);
+    }
+
+    #root > div {
+      width: 45%; height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(203, 177, 245);
+    }
+
+    #root > div > div {
+      width: 90%; height: 45%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(186, 156, 235);
+    }
+
+    #root > div > div > div {
+      width: 45%; height: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(172, 139, 226);
+    }
+
+    #root > div > div > div > div {
+      width: 45%; height: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(154, 115, 218);
+    }
+
+    #root > div > div > div > div > div{
+      width: 90%; height: 90%;
+      background-color: rgb(137, 94, 206);
+    }
+
+  </style>
+
+
+
+</head>
+
+
+<body>
+  
+  <div id="root">
+
+    <div></div>
+    <!-- 내용 추가 -->
+    <div>
+      <div></div>
+      <!-- 내용 추가 -->
+      <div>
+        <!-- 내용 추가 -->
+        <div>
+          <!-- 내용 추가 -->
+          <div>
+            <div></div>
+          </div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
