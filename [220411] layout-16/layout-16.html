@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 웹폰트 : roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- 폰트어썸 -->
+  <script src="https://kit.fontawesome.com/d08da597d2.js" crossorigin="anonymous"></script>
+  <!-- 외부스타일시트 -->
+  <link rel="stylesheet" href="./CSS/common.css">
+  <title>layout-16</title>
+
+  <style>
+/* 전체 영역 설정 */
+    #root{
+      width: 100vw; height: 100vh;
+    }
+
+
+/* 상단 글씨 영역 */
+    #root > header {
+      width: 90vw; height: 25vh;
+    }
+
+    /* 플러스 버튼 */
+    #root > header > div:nth-child(1) {
+      width: 3vh; height: 3vh;
+      border-radius: 3vh;
+      margin: 7vh 0 2vh 0;
+      color: var(--color-2);
+    }
+
+    /* 동그라미 세개 정렬 */
+    #root > header > div:nth-child(4) {
+      width: 100%; height: 6vh;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+/* 카드영역 */
+    #root > main {
+      width: 82vw; height: 26vh;
+      border:1px solid var(--color-4);
+      background-color: var(--color-1);
+      border-radius: 2vh;
+      padding: 2vh;
+      margin: 2vh 0 2vh 0;
+      box-shadow: 0 1vw 1vw var(--color-5);
+    }
+
+    /* 카드번호와 visa로고 영역 */
+    #root > main > div:nth-child(3) {
+      justify-content: space-between;
+      width: 100%; height: 50%;
+    }
+
+    /* 카드번호 영역 */
+    #root > main > div:nth-child(3) > div:nth-child(1) {
+      width: 50%; height: 70%;
+      padding: 5%;
+    }
+
+    /* 카드번호와 발급일자를 정렬하기 위해서 만든 가상의 div */
+    #root > main > div:nth-child(3) > div:nth-child(1) > div {
+      width: 100%; height: 33%;
+    }
+
+    /* 카드번호 영역의 이름 부분인데......양끝정렬에 실패함 */
+    #root > main > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > p{
+      color: var(--color-6);
+      /* justify(양끝맞춤)이 적용되지 않아서 텍스트컬러로 조금 포인트를 줘봤다. 이름이니까...! */
+    }
+
+    /* ic칩과 visa로고가 들어갈 영역 */
+    #root > main > div:nth-child(3) > div:nth-child(2) {
+      width: 40%; height: 100%;
+      align-items: flex-end;
+      /* border: 1px solid white; */
+    }
+
+    /* 기본 크기 설정 */
+    #root > main > div:nth-child(3) > div:nth-child(2) > div {
+      width: 50%; height: 45%;
+    }
+
+    /* ic칩 */
+    #root > main > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) {
+      background-image: url(./img/ic-chip.svg);
+      background-repeat: no-repeat;
+    }
+
+    /* visa */
+    #root > main > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) {
+      background-image: url(./img/visa.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+
+/* 하단 그래프 영역 */
+    #root > footer {
+      width: 84vw; height: 30vh;
+      padding: 3vh 3vw 2vh 3vw;
+      border-radius: 2vh;
+      background-color: var(--color-1);
+    }
+
+    #root > footer > div > div:nth-child(2){
+      position: relative;
+    }
+
+    #root > footer > div > div:nth-child(2) > div:nth-child(2) {
+      background-color: var(--color-5);
+      border-radius: 1vh;
+      width: 100%; height: 2vh;
+    }
+
+    #root > footer > div > div:nth-child(2) > div:nth-child(2) > div {
+      width: 25%; height: 2vh;
+      border-radius: 1vh;
+      background-color: var(--color-3);
+    }
+
+    #root > footer > div > div:nth-child(2) > div:nth-child(3) {
+      position: absolute;
+      top: 60%; left: 45%;
+    }
+
+    #root > footer > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) {
+      position: absolute;
+      top: 60%; left: 70%;
+    }
+
+    #root > footer > div:nth-child(3) > div:nth-child(2) > div:nth-child(3) {
+      position: absolute;
+      top: 60%; left: 85%;
+    }
+    
+    #root > footer > div > div:nth-child(2) > div:nth-child(3) > div {
+      width: 1vh; height: 1vh;
+      border-radius: 1vh;
+      background-color: var(--color-4);
+      margin-bottom: 0.3vh;
+    }
+
+    #root > footer > button {
+      padding: 1vh 5vw 1vh 5vw;
+      border: none;
+      border-radius: 2vh;
+      background-color: var(--color-4);
+      margin: 2vh 0 0 2vw;
+    }
+
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <div id="root" class="flex flex-col flex-a-c">
+
+    <header class="p-robo">
+      <div><i class="fa-solid fa-plus p-large"></i></div>
+      <p class="p-large p-b p-violet">CARD <span class="p-l-violet">management</span></p>
+      <p class="p-violet">Uber Money designed By for Uber</p>
+      <div class="flex">
+        <div class="dot-on"></div>
+        <div class="dot-off"></div>
+        <div class="dot-off"></div>
+      </div>
+    </header>
+
+    <main class="p-robo flex flex-col flex-j-c">
+      <div><p class="p-small p-right p-fff">Bold Card+</p></div>
+      <div><p class="p-big p-b p-center p-b-violet">YOUR Card</p></div>
+      <div class="flex">
+        <!-- 카드번호같은것들 -->
+        <div class="flex flex-col flex-j-b p-violet">
+          <div class="flex flex-j-b">
+            <p>0000</p>
+            <p>1111</p>
+            <p>3333</p>
+            <p>2222</p>
+          </div>
+          <div class="flex flex-j-b">
+            <p>Bold Card</p>
+            <p>09 / 28</p>
+          </div>
+          <div>
+            <p class="p-just">Marilyn Monroe</p>
+            <!-- text-align : justfy를 설정해 양끝정렬을 하려했는데 정렬이 되지 않는다... -->
+          </div>
+        </div>
+        <!-- 비자마크와 IC칩 -->
+        <div class="flex flex-col flex-j-b">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="p-robo">
+      <div class="margin-bottom">
+        <div><p class="p-b p-b-violet">Good Habit</p></div>
+        <div>
+          <p class="p-small p-right p-violet">222, 333, 444, 555</p>
+          <div class="flex flex-a-c">
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+            <p class="p-small p-center p-fff">45%</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="margin-bottom">
+        <div><p class="p-b p-b-violet">Duolino</p></div>
+        <div>
+          <p class="p-small p-right p-violet">333, 555, 777, 111</p>
+          <div class="flex flex-a-c">
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+            <p class="p-small p-center p-fff">70%</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="margin-bottom">
+        <div><p class="p-b p-b-violet">Andrid</p></div>
+        <div>
+          <p class="p-small p-right p-violet">344, 555, 677, 777</p>
+          <div class="flex flex-a-c">
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+            <p class="p-small p-center p-fff">85%</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="p-b p-violet">MORE</button>
+    </footer>
+
+  </div>
+
+</body>
+</html>
