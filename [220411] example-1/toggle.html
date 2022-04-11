@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toggle</title>
+
+  <style>
+
+    #root > div {
+      width: 60px; height: 30px;
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    #root > div > input {
+      width: 60px; height: 30px;
+      opacity: 0;
+      position: absolute;
+      margin: 0;
+      z-index: 2;
+    }
+
+    #root > div > input:checked ~ div {
+      background-color: rgb(86, 164, 216);
+    }
+
+    #root > div > input:checked ~ div > div {
+      left: 50%;
+    }
+
+    #root > div > div:nth-child(2) {
+      width: 60px; height: 30px;
+      border-radius: 20px;
+      background-color: rgb(163, 163, 163);
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    #root > div > div:nth-child(2) > div {
+      width: 24px; height: 24px;
+      border-radius: 20px;
+      margin-left: 2px;
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      left: 0;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div id="root">
+
+    <div id="toggle">
+      
+      <!-- 체크박스 -->
+      <input type="checkbox">
+      <!-- 토글 배경 -->
+      <div>
+        <!-- 버튼 -->
+        <div></div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
