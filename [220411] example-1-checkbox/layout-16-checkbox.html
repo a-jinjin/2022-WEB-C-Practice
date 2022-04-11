@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    *{margin:0; padding:0;}
+    
+    #root {
+      width: 100vw; height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #root > header {
+      width: 90vw; height: 10vh;
+      margin-top: 3vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* border: 1px solid pink; */
+    }
+
+    #root > header > div {
+      width: 10vh; height: 10vh;
+      /* border: 1px solid pink; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    #root > header > div > input {
+      width: 10vh; height: 10vh;
+      opacity: 0;
+      position: absolute;
+      z-index: 2;
+    }
+
+    #root > header > div > div:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+/* +모양을 만들기 위한 막대기 두 개 */
+    #root > header > div > div:nth-child(2) > div {
+      width: 10vh; height: 1vh;
+      border-radius: 1vh;
+      background-color: lightgray;
+      position: absolute;
+      z-index: 1;
+      transition: 0.3s;
+    }
+
+    /* 'ㅣ' 모양과 '-' 모양을 합쳐 '+'모양을 만들기 위해 하나는 90도로 기울여 'ㅣ' 모양으로 만들어 준다. */
+    #root > header > div > div:nth-child(2) > div:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+
+/* 체크박스에 체크가 활성화되면 +모양을 x모양으로 바꿔준다. */
+    #root > header > div > input:checked + div > div:nth-child(1) {
+      transform: rotate(-45deg);
+      background-color: pink;
+    }
+    /* + ==> 인접태그를 바로 뒤따르는 형제를 선택
+    input + div == input의 바로 뒤에 오는 div태그 하나를 선택한다. */
+    
+    #root > header > div > input:checked + div > div:nth-child(2) {
+      transform: rotate(45deg);
+      background-color: pink;
+    }
+
+
+  </style>
+</head>
+
+
+<body>
+  <!-- 전체 박스 영역 지정 -->
+  <div id="root">
+    <!-- 타이틀 부분 -->
+    <header>
+      <!-- 더하기 모양을 곱하기 모양으로 -->
+      <div>
+        <input type="checkbox" name="" id="">
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+  </div>
+
+</body>
+</html>
