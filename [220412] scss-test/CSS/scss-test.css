@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+#root > nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: none;
+  width: 100vw;
+  height: 10vh;
+}
+#root > nav > span {
+  background-color: seagreen;
+  color: #fff;
+  font-weight: bold;
+  padding: 1vh;
+  margin: 0 1vh 0 1vh;
+}
+#root > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: none;
+  width: 80vw;
+  height: 40vh;
+  border: 1px solid lightseagreen;
+  padding: 5vh;
+  text-align: center;
+}/*# sourceMappingURL=scss-test.css.map */

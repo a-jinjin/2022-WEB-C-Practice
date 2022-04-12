@@ -1,0 +1,45 @@
+*{margin:0; padding:0;}
+
+@mixin bg-color($bgc) {
+  background-color: $bgc;
+}
+
+@mixin flex($align, $justify, $direc) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direc;
+}
+
+
+#root {
+  @include flex(center, flex-start, column);
+  width: 100vw; height: 100vh;
+
+
+  & > nav {
+    @include flex(center, center, none);
+    width: 100vw; height: 10vh;
+
+    & > span {
+      @include bg-color(seagreen);
+      color: #fff;
+      font-weight: bold;
+      padding: 1vh;
+      margin: 0 1vh 0 1vh;
+
+    }
+    
+  }
+
+
+  & > div {
+    @include flex(center, center, none);
+    width: 80vw; height: 40vh;
+    border: 1px solid lightseagreen;
+    padding: 5vh;
+    text-align: center;
+
+  }
+
+}
