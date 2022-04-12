@@ -1,0 +1,46 @@
+*{margin:0; padding:0;}
+
+@mixin flex-setting($a, $b) {
+  display: flex;
+  justify-content: $a;
+  // $a == 변할 수 있는 값
+  align-items: $b;
+  // 변수를 여러개 추가할 수도 있다.
+  // a나 b 말고, 더 직관적인 이름으로 바꿀 수도 있다!
+}
+
+
+
+#root {
+  width: 100vw; height: 100vh;
+  background-color: #c4c4c4;
+
+  // include == 추가해줘라
+  // flex-setting() == 위에서 추가한 mixin
+  @include flex-setting(center);
+  
+  // & = 여기서는 #root
+  & > div {
+    width: 50vw; height: 50vh;
+    background-color: #aaa;
+    
+    @include flex-setting(flex-start);
+  
+
+    // & > section ==> & = 부모 (여기서는 #root > div)
+    & > section {
+      width: 100px; height: 100px;
+      background-color: orange;
+      border: 1px solid tomato;
+    }
+
+    & > section:nth-child(2) {
+      height: 200px;
+      background-color: seagreen;
+    }
+  
+  
+  }
+
+
+}
