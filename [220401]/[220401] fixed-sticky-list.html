@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    main {
+      width: 100vw; height: 100vh;
+      background-color: lightgray;
+      
+      overflow: scroll;
+    }
+
+    main > div {
+      width: 100%;
+      height: 7%;
+      
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+
+
+    /* fix로 하단에 고정해보기 */
+    main > div:nth-child(1) {
+      height: 7%;
+      border: 10px solid red;
+      
+      position: fixed;
+      bottom:0;
+      /* fixed는 위치를 지정해주지 않아도 고정된다. */
+    }
+    /* fix는 position을 지정하면 원래 차지하던 영역이 사라진다. (position:absolute와 비슷함)*/
+
+
+    /* sitcky로 상단에 고정해보기 */
+    main > div:nth-child(2) {
+      height: 20%;
+      border: 10px solid blue;
+
+      position: sticky;
+      top: 0%;
+      /* sticky는 위치를 지정해주지 않으면 스크롤과 함께 딸려 올라간다. */
+    }
+    /* sticky는 position값을 지정해도 원래 차지하던 영역만큼을 비워두게 된다. (position:relative와 비슷함)*/
+
+    /* ------정리------ */
+    /* 두가지 모두 화면에 고정이 된다는 공통점이 있지만, fixed는 top, bottom 등 위치를 지정해주지 않아도 
+    스크롤해도 계속 그 위치에 붙어있는 반면, sticky는 위치를 지정해주지 않으면 딸려 올라가 버린다.*/
+
+    
+  </style>
+
+</head>
+
+<body>
+  <!-- position : sticky와 fix 구분해보기 -->
+  
+  <main>
+    <!-- main>div(1) 하단 고정할 영역 : fix 써보기-->
+    <div></div>
+    <!-- main>div(2) 이미지 영역 : sticky 써보기-->
+    <div></div>
+    
+    <!-- fixed와 sticky테스트를 위해 스크롤을 만들기 위한 리스트 (별 의미 없음) -->
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    <div>
+      <div>LECTURE 01 (PDF)</div><div>↓</div>
+    </div>
+    
+
+
+  </main>
+
+  </div>
+
+</body>
+</html>
