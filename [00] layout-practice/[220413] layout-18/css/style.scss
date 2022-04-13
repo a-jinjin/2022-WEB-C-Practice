@@ -1,0 +1,193 @@
+*{margin:0; padding:0;}
+
+:root {
+  --color-1: rgb(149, 149, 163);
+}
+
+@mixin flex($flex-a, $flex-j, $flex-d) {
+  display: flex;
+  align-items: $flex-a;
+  justify-content: $flex-j;
+  flex-direction: $flex-d;
+}
+
+// p-size 값을 쓰지 않았을 때 16px로 출력하겠다.
+@mixin txt($p-color, $p-size:16px, $p-weight) {
+  color: $p-color;
+  font-size: $p-size;
+  font-weight: $p-weight;
+}
+
+
+#root {
+  width: 100vw; height: 100vh;
+  @include flex(center, none, column);
+  overflow: hidden;
+
+
+  & > nav {
+    width: 95vw; height: 7vh;
+    @include flex(none, center, none);
+    position: relative;
+    
+    
+    & > span {
+      @include txt(var(--color-1), 0.7rem, bold);
+      height: 50%;
+      // 메뉴영역 크기를 고정하기 위해서 px단위를 사용함
+      padding: 10px 20px 20px 20px;
+    }
+    
+    & > span:nth-child(2) {
+      @include txt(red, 0.7rem, bold);
+      background-color: lightpink;
+    }
+
+    & > div:last-child {
+      width: 100%;
+      // 메뉴에 들어갈 흰색 선. 어차피 배경이 흰색이라 길이가 얼마가 되어도 티가 나지 않을 것 같아서 전체 가로영역을 차지하게 만들었다.
+      border-bottom: 3px solid white;
+      z-index: 2;
+      top: 5.5vh;
+      position: absolute;
+    }
+
+  }
+
+  & > main {
+    width: 95vw; height: 72vh;
+    margin-top: 15vh;
+    position: relative;
+    @include flex(center, center, none);
+
+
+    // 화살표 버튼
+    & > div:first-child {
+      width: 5vh; height: 5vh;
+      border-radius: 5vh;
+      background-color: red;
+      position: absolute;
+      z-index: 2;
+      left: 14vw;
+      top: 25vh;
+    }
+
+    // 내용 영역
+    & > div:nth-child(2) {
+      width: 80%; height: 100%;
+      background-color: lightgray;
+      position: absolute;
+      z-index: 1;
+      @include flex(center, center, column);
+
+      & > div:first-child {
+        @include txt(pink, 6rem, bold);
+        @include flex(center, center, column);
+        width: 30%; height: 12%;
+        margin-bottom: 4vh;
+        position: relative;
+      
+        & > p:first-child {
+          position: absolute;
+          right: 4vw;
+          z-index: 2; 
+        }
+
+        & > p:nth-child(2) {
+          @include txt(red, 6rem, bold);
+          position: absolute;
+          left: 4vw;
+          bottom: -1.7vh;
+          z-index: 1;          
+        }
+      
+      }
+
+
+      & > div:nth-child(2) {
+        width: 30%; height: 0.5vh;
+        margin-bottom: 3vh;
+        background-color: red;
+      }
+
+
+      & > div:nth-child(3) {
+        width: 90%;
+        @include txt(red, 1rem, thin);
+        text-align: center;
+      }
+
+    }
+
+
+    // 뒤로 숨긴 박스 div
+    & > div:nth-child(3) {
+      width: 80%; height: 100%;
+      background-color: red;
+      position: absolute;
+      z-index: 0;
+      bottom: 5vh;
+      right: -10vw;
+    }
+
+
+  }
+
+
+}
+
+// 반응형
+@media (min-width: 1000px) {
+
+  #root > main {
+    width: 70vw; height: 55vh;
+    margin-top: 20vh;
+
+
+    // 화살표 버튼
+    & > div:first-child {
+      left: -6vw;
+      top: 19vh;
+    }
+
+    // 내용 영역
+    & > div:nth-child(2) {
+      width: 50%; height: 100%;
+      padding: 0;
+      position: relative;
+      @include flex(center, center, column);
+
+      
+      & > div:first-child {
+        width: 30%; height: 15%;
+        position: relative;
+        
+        & > p:first-child {
+          left: 3.5vw;
+          z-index: 2; 
+        }
+
+        & > p:nth-child(2) {
+          right: 3.5vw;
+          z-index: 1;          
+        }
+      
+      }
+
+    }
+
+
+    // 뒤로 숨긴 박스 div
+    & > div:nth-child(3) {
+      width: 40%; height: 100%;
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
+
+
+  }
+
+
+
+}
