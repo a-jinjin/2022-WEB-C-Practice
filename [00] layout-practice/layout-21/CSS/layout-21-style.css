@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-1: rgb(247, 247, 247);
+  --color-2: rgb(199, 199, 199);
+  --color-3: rgb(133, 133, 133);
+  --color-4: rgb(105, 105, 105);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+#root > header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--color-1);
+}
+#root > header > div:first-child {
+  width: 7vw;
+  height: 6vh;
+  margin-left: 2vw;
+  background-color: var(--color-2);
+}
+#root > header > div:nth-child(2) {
+  width: 55vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  z-index: 2;
+  top: 2vh;
+  right: 2vw;
+  background-color: var(--color-3);
+}
+#root > header > div:nth-child(2) > div {
+  width: 22%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-2);
+}
+#root > header > div:nth-child(2) > div > ul {
+  list-style-type: none;
+}
+#root > main {
+  width: 100vw;
+  height: 45vh;
+  position: relative;
+  background-color: var(--color-2);
+}
+#root > main > div {
+  width: 30vw;
+  height: 32vh;
+  position: absolute;
+  background-color: var(--color-1);
+}
+#root > main > div:nth-child(1) {
+  z-index: 0;
+  top: 9vh;
+  left: 7vw;
+  background-color: var(--color-4);
+}
+#root > main > div:nth-child(2) {
+  z-index: 1;
+  top: 6vh;
+  left: 5vw;
+  background-color: var(--color-3);
+}
+#root > main > div:nth-child(3) {
+  z-index: 2;
+  top: 3vh;
+  left: 3vw;
+  background-color: var(--color-1);
+}
+#root > section {
+  width: 96vw;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 2vw 0 2vw;
+  background-color: var(--color-3);
+}
+#root > section > div {
+  width: 32%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  background-color: var(--color-2);
+}
+#root > section > div > div {
+  width: 48%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 0;
+  top: 2vh;
+  left: 4vh;
+  background-color: var(--color-3);
+}
+#root > section > div > div > div {
+  width: 90%;
+  height: 20%;
+  background-color: var(--color-2);
+}
+#root > section > div > div > div:nth-child(2) {
+  width: 90%;
+  height: 60%;
+}
+#root > section > div > div:nth-child(2) {
+  z-index: 1;
+  top: 3vh;
+  left: 45%;
+  background-color: var(--color-4);
+}
+#root > footer {
+  width: 96vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 2vw 0 2vw;
+  background-color: var(--color-4);
+}
+#root > footer > div {
+  width: none;
+  height: 80%;
+  flex-grow: 1;
+  background-color: var(--color-2);
+}
+#root > footer > div:nth-child(2) {
+  flex-grow: 2;
+  margin: 0 2vw 0 2vw;
+}/*# sourceMappingURL=layout-21-style.css.map */
