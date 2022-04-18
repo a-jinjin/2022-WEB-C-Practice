@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+
+    // const == 상수
+    // 상수는 ""를 쓰지 않는다. (변수는 "사용")
+    const root = document.querySelector("#root");
+    console.log(root); // 기록을 볼래(log)
+    // 작성을 했다면 반드시 console.log()를 찍는다(확인한다). ====> 한 줄 /한 개 마다. ====> 완전히 눈에 들어올 때 까지!!
+    console.dir(root); //구조를 볼래(dir) ====> console에서!
+
+    // 변수를 초기화했다. (initial) / 변수를 선언했다. / 초기설정했다.
+    let one = 100;
+
+    root.style.width = one + "vw";
+    // 구조를 들여다 보니 style이라는 속성에 width값이 있더라.
+    // 거기에 값을 문자열 100vw를 줘봤다.
+
+    root.style.height = one + "vh";
+    // 변수를 할당했다. (assignment) / 초기화한 변수를 사용했다.
+    
+    root.style.backgroundColor = "#ccc";
+
+
+  </script>
+</body>
+</html>
