@@ -1,0 +1,134 @@
+*{margin:0; padding:0;}
+
+:root {
+  --color-1: salmon;
+  --color-2: yellow;
+  --color-3: #ccc;
+  --color-4: #333;
+  --color-5: #fff;
+}
+
+$c-sal:var(--color-1);
+$c-yel:var(--color-2);
+$gray-1:var(--color-3);
+$gray-2:var(--color-4);
+$c-fff:var(--color-5);
+
+
+@mixin flex ($jus, $ali, $dir){
+  display: flex;
+  justify-content: $jus;
+  align-items: $ali;
+  flex-direction: $dir;
+}
+
+@mixin pos ($po) {
+  position: $po;
+}
+
+@mixin location ($left, $top, $right, $bottom) {
+  left: $left;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin size ($w, $h) {
+  width: $w; height: $h;
+}
+
+@mixin card-contains {
+  @include size(90vw, 50vh);
+  @include pos(relative);
+  background-color: rgba(200, 200, 200, 0.2);
+  backdrop-filter: blur(7px);
+  // 20으로 하니 너무 과하게 블러처리되어 형체가 보이질 않아서 값을 조정
+  padding: 1vw;
+  top:-20vh;
+  margin-bottom: 2vh;
+  border-radius: 3vw;
+  transition:1s;
+}
+
+@mixin card-h1 {
+  @include size(80vw, 20vh);
+  margin: 2vw;
+  font-size:4rem;
+  font-weight: 900;
+  color: $c-fff;
+}
+
+
+
+// styling
+
+#root {
+  @include size(100%, null);
+  // --> 가로 스크롤을 없애기 위해 vw를 %로 변경
+  @include flex(center, center, column);
+  background-color: $gray-2;
+
+
+  // & > div {
+  //   border: 1px solid $c-fff;
+  // }
+
+  // shape라는 id값을 가지고 있었던 첫번째 자식
+  & > div:first-child {
+    @include pos (relative);
+    @include size(inherit, 50vh);
+
+
+    & > div {
+      @include pos (absolute);
+    }
+
+    // 첫번째 빨간 원
+    & > div:first-child {
+      @include location(10vw, 5vh, null, null);
+      @include size(20vh, 20vh);
+      background-color: $c-sal;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    // 두번째 노란 원
+    & > div:nth-child(2) {
+      @include size(60vw, 60vw);
+      @include location(null, 15vh, 14vw, null);
+      border-radius: 50%;
+      border: 2px solid $c-yel;
+    }
+
+    // 쩜쩜쩜...
+    & > div:last-child {
+      @include size(2vw, 10vw);
+      @include location(10vw, 23vh, null, null);
+      // border: 1px solid $c-fff;
+
+      & > div {
+        @include size(2vw, 2vw);
+        background-color: $c-fff;
+        border-radius: 50%;
+        margin-top: 2vh;
+      }
+
+    }
+
+  }
+
+  // card-section라는 id값을 가지고 있었던 두 번째 자식
+  & > div:nth-child(2) {
+    @include flex(center, center, column);
+
+    & > div {
+      @include card-contains;
+
+      & > h1 {
+        @include card-h1;
+      }
+    }
+
+  }
+
+}

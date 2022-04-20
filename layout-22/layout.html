@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout-22</title>
+  <link rel="stylesheet" href="./css/22-style.css">
+
+  </head>
+<body>
+  <dif id="root">
+
+    <!-- 모양 -->
+    <div>
+
+      <div></div>
+      <div></div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    </div>
+
+    <div>
+      <div id="card-one">
+      <!-- script에서 불러오기 위해 id값을 지정한 것 -->
+        <h1>DON'T<br>DWELL<br>ON<br>THE<br>PAST</h1>
+      </div>
+      <div id="card-two">
+        <h1>SEIZE<br>THE<br>DAY</h1>
+      </div>
+    </div>
+
+  </dif>
+
+
+  <!-- 스크립트 -->
+  <script>
+    const cardOne = document.querySelector('#card-one');
+    cardOne.style.order = 1;
+    const cardTwo = document.querySelector('#card-two');
+    cardTwo.style.order = 2;
+
+    cardOne.addEventListener('click', function() {
+      console.dir(cardOne);
+      cardOne.style.order = 2;
+      cardTwo.style.order = 1;
+    });
+  </script>
+
+</body>
+</html>

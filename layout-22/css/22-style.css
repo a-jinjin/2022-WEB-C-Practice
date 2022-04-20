@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-1: salmon;
+  --color-2: yellow;
+  --color-3: #ccc;
+  --color-4: #333;
+  --color-5: #fff;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-4);
+}
+#root > div:first-child {
+  position: relative;
+  width: inherit;
+  height: 50vh;
+}
+#root > div:first-child > div {
+  position: absolute;
+}
+#root > div:first-child > div:first-child {
+  left: 10vw;
+  top: 5vh;
+  width: 20vh;
+  height: 20vh;
+  background-color: var(--color-1);
+  border-radius: 50%;
+  z-index: 0;
+}
+#root > div:first-child > div:nth-child(2) {
+  width: 60vw;
+  height: 60vw;
+  top: 15vh;
+  right: 14vw;
+  border-radius: 50%;
+  border: 2px solid var(--color-2);
+}
+#root > div:first-child > div:last-child {
+  width: 2vw;
+  height: 10vw;
+  left: 10vw;
+  top: 23vh;
+}
+#root > div:first-child > div:last-child > div {
+  width: 2vw;
+  height: 2vw;
+  background-color: var(--color-5);
+  border-radius: 50%;
+  margin-top: 2vh;
+}
+#root > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#root > div:nth-child(2) > div {
+  width: 90vw;
+  height: 50vh;
+  position: relative;
+  background-color: rgba(200, 200, 200, 0.2);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  padding: 1vw;
+  top: -20vh;
+  margin-bottom: 2vh;
+  border-radius: 3vw;
+  transition: 1s;
+}
+#root > div:nth-child(2) > div > h1 {
+  width: 80vw;
+  height: 20vh;
+  margin: 2vw;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--color-5);
+}/*# sourceMappingURL=22-style.css.map */
