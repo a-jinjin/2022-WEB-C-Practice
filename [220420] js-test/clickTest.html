@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+  <style>
+    *{margin: 0; padding:0;}
+    #hello {
+      width: 100px; height: 100px;
+    }
+  </style>
+
+<body>
+  
+  <div id="hello">Click here!</div>
+
+  <script>
+    let hello = document.getElementById("hello");
+    // 도큐먼트에서 hello라는 id값을 가진 녀석을 좀 불러와
+    // 변수 hello에 대입할거야.
+
+    // console.dir(hello);
+    // 변수 hello를 좀 보고싶은데.
+
+    // console.log(hello.style);
+    // hello에 style이라는 값이 있더라. 이게 뭔지 보여줘.
+
+
+    hello.addEventListener('click', function(event){
+      // hello에다가 click이라는 이벤트를 하나 추가할것이다.
+
+      event.target.style.backgroundColor = 'gray';
+      // 이벤트가 실행된다면, 대상(target)의 style의 backgroundColor에 'gray'를 대입하겠다.
+      
+      if(event.target.style.backgroundColor !== 'gray') {
+      // 대상의 backgroundColor가 'gray'가 아니라면
+        event.target.style.backgroundColor = 'gold';
+        // backgroundColor를 'gold'로 해라.
+      }else{
+        event.target.style.backgroundColor = 'orangered';
+        // 'gray'가 맞다면 backgroundColor를 'orangered'로 해라.
+      }
+    })
+
+
+  </script>
+
+</body>
+</html>
