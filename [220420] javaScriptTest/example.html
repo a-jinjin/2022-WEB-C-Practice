@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">hello</h1>
+
+
+  <script>
+    let a = document.getElementById('title');
+    // js야, 문서에서 id값을 하나 가져오고싶다. ★id★값의 이름은 ★문자열★ 'title'이다.
+    // 발견했으면 변수로 지정해달라. 변수 이름은 a다.
+
+    console.dir(a);
+    // js야, 변수 a가 가리키는 뭐 좀 구조를 보고싶다.
+    console.log(a.style);
+    // js야, 니가 보여준 구조를 보니까, style이라는 키값이 있더라. 이거 뭐냐?
+    let colorValue = "red";
+    // 나 변수 선언한다. 문자열 뭐뭐뭐다. (red가 아님)
+    a.style.color = colorValue;
+    if(a.style.color === "red") {
+      a.style.color = "rgba(153,153,153,0.4)";
+    }
+
+
+  </script>
+</body>
+</html>
