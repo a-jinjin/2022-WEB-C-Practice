@@ -17,5 +17,26 @@
     <p><span id="title">but whatever you do</span>, you have to keep moving forward.</p>
 
   </div>
+
+
+  <script>
+    // 스크립트로 간단하게 제어해보기
+
+
+    let title = document.getElementById("title");
+    // "title"이라는 id를 가진 element를 가져와서 title변수에 대입하겠다.
+    let pointColor = '#000';
+    // pointColor라는 변수에 '#000'을 대입하겠다.
+
+    // console.log(title);
+    // console.dir(title);
+
+    if(title.style.color !== null){
+    // title의 style > color에 값이 없는게 아니라면
+      title.style.color = pointColor
+    // title의 style > color를 변수 pointColor로 바꿔달라.
+    }
+
+  </script>
 </body>
 </html>
