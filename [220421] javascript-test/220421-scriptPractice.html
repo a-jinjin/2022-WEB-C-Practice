@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="light"></div>
+  </div>
+  
+  
+  <script>
+    
+    const root = document.getElementById("root");
+    // console.log(root);
+    const lightBtn = document.getElementById('light');
+    // console.log(lightBtn);
+    
+    const bgColor = ["#fff", "#000"];
+    // 배열에 색상값 두 개를 넣어놨다.
+    // ====> 스크립트는 순서대로 읽혀지기때문에, 이 배열이 사용될 36열 아래에 위치하게 된다면 에러가 난다.
+    
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+    // 문서의 여백을 없앨것이다.
+
+
+    let full = 100;
+    // 100이라는 숫자가 반복되는 것 같아서 변수로 지정했다.
+
+
+    root.style.width = `${full}vw`;
+    root.style.height = `${full}vh`;
+    root.style.backgroundColor = bgColor[0];
+    // root를 스타일링 (크기와 배경색)
+    // console.dir(root);
+    // console에서 root의 directory를 보여달라.
+    // root의 style에 display와 justifycontent, alignitems가 있다는 것을 확인했다.
+    root.style.display = "flex";
+    root.style.justifyContent = "center";
+    root.style.alignItems = "center";
+    // 정렬을 시도해봄
+
+    lightBtn.style.width = `${full}px`;
+    lightBtn.style.height = `${full}px`;
+    lightBtn.style.backgroundColor = "#333";
+    // lightBtn을 스타일링 (크기와 배경색)
+
+
+    // lightBtn.addEventListener("click", function() {
+    //   // lightBtn에 클릭이벤트를 추가할것이다. 
+
+    //   if(root.style.backgroundColor = bgColor[0]){
+    //     // root의 배경색이 bgColor[0]이라면,
+    //     root.style.backgroundColor = bgColor[1];
+    //     // root의 배경색을 bgColor[1]로 바꿔라
+    //   }else{
+    //     // root의 배경색이 bgColor[0]이 아니라면,
+    //     root.style.backgroundColor = bgColor[0];
+    //     // root의 배경색을 bgColor[0]으로 바꿔라
+    //   }
+
+    // });
+    // ===> 해당 클릭이벤트는 if까지는 진행이 되지만, if구문대로 bgColor[1]로 바뀌고 난 뒤에는 else구문이 실행되지 않는다.
+    // 또한, 55열의 =를 ===로 변경하면 if구문도 실행되지 않는다. =와 ===의 차이때문일까?
+
+
+    let light = 0;
+    
+    lightBtn.addEventListener("click", function() {
+      // lightBtn에 클릭이벤트를 추가할것이다.
+
+      if(light === 0){
+        root.style.backgroundColor = bgColor[1];
+        // root의 배경색을 배열bgColor[1]로 바꿔라
+        lightBtn.style.backgroundColor = bgColor[0];
+        // lightBtn의 배경색을 배열bgColor[0]로 바꿔라
+        light = 1;
+      }else{
+        root.style.backgroundColor = bgColor[0];
+        // root의 배경색을 배열bcColor[0]으로 바꿔라
+        lightBtn.style.backgroundColor = bgColor[1];
+        // lightBtn의 배경색을 배열bgColor[1]로 바꿔라
+        light = 0;
+        // 그리고 light는 0으로 바꿔라
+      }
+    });
+
+    // // ===> 예제의 방식대로 변수 light를 추가해서 if의 조건부분에 넣어주니 해결되었다. 어떤 원리인지는 아직 모르겠다... div를 정렬하기 위해 안보이는 div요소를 추가하는거랑 비슷한 원리일까?
+
+
+
+  </script>
+
+</body>
+</html>

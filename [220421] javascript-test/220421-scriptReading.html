@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+    
+  </div>
+
+  <script>
+    /* 
+    ? 도전해보기 ★★★★★★★★★★★★★★★★★★★★★★★★
+    TODO: 아래의 자바스크립트 명령에 대한 의도를 유추 하시오.
+    */
+    document.body.style.padding = "0";
+    // 문서의 body의 style에 있는 padding에 0을 대입하겠다.
+    document.body.style.margin = "0";
+    // 문서의 body의 style에 있는 margin에 0을 대입하겠다.
+    // ====> css에서 쓰는 *{padding:0; margin:0}과 같은 결과물. 문서 전체의 마진/패딩값을 지정한 것.
+
+
+    const root = document.getElementById("root");
+    // 문서에서 "root"라는 ID를 가진 Element를 불러오겠다. 그리고 그것을 변수 root에 대입하겠다.
+    let widthValue = 100;
+    // widthValue라는 변수에 100이라는 숫자값을 대입하겠다.
+    let heightValue = 100;
+    // heightValue라는 변수에 100이라는 숫자값을 대입하겠다.
+    
+    
+    root.style.width = `${widthValue}vw`;
+    // 변수 root의 style에 있는 width에 widthValue(===100)vw를 대입하겠다.(===100vw) ==> root의 가로값은 100vw다.
+    root.style.height = `${heightValue}vh`;
+    // 변수 root의 style에 있는 height에 heightValue(===100)vw를 대입하겠다. (===100vh) ==> root의 세로값은 100vh다.
+    // ==> 변수 root의 크기를 지정한 것. 100vw * 100vh로 지정되었다.
+
+    root.style.backgroundColor = "darkblue";
+    // 변수 root의 style에 있는 backgroundColor에 "darkblue"를 대입하겠다. 
+    // ==> root의 배경색을 지정한 것. 'darkblue'로 지정했다.
+    
+    
+    let backgroundColorArray = ["#ff0000", "#333333"];
+    // 변수 backgroundColorArray는 배열이다. #ff0000(빨간색), #333333(진회색)이 들어있다.
+    let setSwitch = 0;
+    // 변수 setSwitch에 0을 대입하겠다.
+
+
+    root.addEventListener("click", function() {
+      // root에 'click'이라는 이벤트를 추가할 것이다.
+      // ==> root를 클릭하면 뭔가 이벤트가 발생할 것이다.
+      
+      if(setSwitch === 0) {
+        // 변수 setSwitch의 값이 0과 같다면
+        root.style.backgroundColor = backgroundColorArray[1];
+        // root의 style에 있는 backgroundColor에 배열 backgroundColorArray의 두번째(배열[1])값을 대입하겠다.
+        // ==> 변수 setSwitch에 대입된 값이 0이라면 root를 클릭했을 때 root의 배경색을 배열[1]인 #333333(진회색)으로 바뀌도록 하겠다.
+        setSwitch = 1;
+        // 그리고 나서 변수 setSwitch에 1을 대입하겠다.
+      
+      } else {
+        // 변수 setSwitch의 값이 0과 같지 않다면
+        root.style.backgroundColor = backgroundColorArray[0];
+        // root의 style에 있는 backgroundColor에 배열 backgroundColorArray의 첫번째(배열[0])값을 대입하겠다.
+        // ==> 변수 setSwitch에 대입된 값이 0이 아니라면 root를 클릭했을 때 root의 배경색을 배열[0]인 #ff0000(빨간색)으로 바뀌도록 하겠다.
+        setSwitch = 0;
+        // 그리고 나서 변수 setSwitch에 0을 대입하겠다.
+      }
+
+      // ==> root를 한 번 클릭했다면 원래 darkblue색상이었던 root의 배경색이 #ff0000으로 바뀌면서 setSwitch값이 1이 될 것이다. 그렇기 때문에, 두 번째 클릭을 한다면 setSwitch값이 1이라 if구문이 참이 아니게 된다. 따라서 두 번째 클릭에서는 else에 적힌대로 root의 배경색이 #333333(진회색)으로 바뀌면서 setSwitch값이 0으로 돌아오게 된다.
+      // ==> 따라서, 이 이벤트는 root를 클릭할때마다 색상이 바뀌는 이벤트로, 빨간색과 진회색이 차례로 반복되며 나타나는 이벤트이다.
+    });
+
+
+
+
+    
+
+
+  </script>
+</body>
+</html>

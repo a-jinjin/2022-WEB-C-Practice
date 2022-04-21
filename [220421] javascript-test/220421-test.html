@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+<body>
+  <div id="root">
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    // getElementById라는 함수는 인수(argument)로 "문자열"(string)로만 받는 규칙이 있다.
+    // const data = document.querySelector("#root");
+    
+    // console.dir(root);
+
+    let back = 20;
+    // back이라는 변수에 20을 대입하겠다.
+
+    root.style.width = back + "vw"
+    // root의 style에 있는 width에 변수 back과 "vw"를 더한 값을 대입하겠다 (back = 20, back + "vw" = 20vw)
+    root.style.height = back + "vh"
+    root.style.backgroundColor = "salmon";
+    // root의 style에 있는 backgroundColor에 "salmon"을 대입하겠다.
+
+    console.dir(root);
+    // root의 directory를 보여달라.
+
+    const member = ["피카츄", "라이츄", "파이리", "꼬부기"];
+    // member라는 배열을 만들겠다. 피카츄, 라이츄, 파이리, 꼬부기를 대입할 것이다.
+
+    let count = 0;
+    // 변수 count에 0을 대입하겠다.
+
+    root.addEventListener("click", function() {
+    // click이라는 이벤트를 발생시키겠다. 타겟은 root다.
+
+      let result = back*2;
+      // result라는 변수에 back이라는 변수 *2를 한 값을 대입하겠다.
+      
+      // count = count +1;
+      // 자바스크립트는 위에서부터 순서대로 읽힌다. 따라서 46에서 count = count+1이라는 값을 선언했었다면 61에 있는 변수 count는 count+1을 대입한 변수 count에 또 count+1을 대입한 것이기 때문에, 사실상 count+2를 한 것이 되어 0+2 즉, 배열의 첫번째, member[0]인 "피카츄"가 아니라 배열의 두번째, member[1]인 "라이츄"를 보여주게 될 것이다.
+
+      root.style.width = result + "vw";
+      // root의 style에 있는 width에 변수 result(back*2) + "vw"를 한 값을 대입하겠다.
+      root.style.height = result + "vh";
+      root.style.backgroundColor = "lightgreen";
+      // root의 style에 있는 backgroundColor에 "lightgreen"을 대입하겠다.
+      root.textContent = member[count] + "님 반갑습니다.";
+      // root의 directory에 있던 textcontent에 member[count] + "님 반갑습니다."를 대입하겠다.
+      // member[count] ==> 변수 count에는 0이 대입되어 있다.
+      // 따라서, member[count]는 member[0]과 같은 뜻이다.
+      // ==> member라는 배열의 0번째
+      // 최종적으로, member라는 배열[0]에 있는 것 + "님 반갑습니다."를 root의 textContent에 대입하겠다는 뜻이다.
+
+      count = count +1;
+      // 0이 대입되어있는 변수 count에 count + 1을 한 값을 대입하겠다. (=== count = 1)
+
+      if(count > member.length-1) {
+      // 만약 count에 대입된 값이 member 배열의 마지막 index보다 크다면
+        count = 0;
+        // count에 0을 대입하겠다. (=== 다시 member[0]을 보여주겠다.)
+      }
+    });
+
+
+    // ===> 이 이벤트는 root를 클릭할 때 마다 member[0]에 +1을 해서 
+    // root에 'member[]님 반갑습니다'라는 텍스트를 띄우는 이벤트이다.
+    // count와 if를 이용하여 member[마지막]이 되었을 때 다시 member[0]으로 출력될 수 있게 만들어놓은 것!
+
+  </script>
+</body>
+</html>
