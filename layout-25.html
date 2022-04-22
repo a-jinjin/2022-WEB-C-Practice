@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="box">
+      <p id="text"></p>
+    </div>
+  </div>
+
+
+  <script>
+    let root = document.getElementById('root');
+    // 문서에 있는 '#root'를 id로 불러오겠다.
+    console.dir(root);
+    // 콘솔로 디렉토리 확인
+
+    // let txt = document.getElementsByClassName('text');
+    // 문서에 있는 '.text'를 class로 불러오겠다.
+    // console.dir(text);
+    
+    let text = document.getElementById('text');
+    // 문서에 있는 '#text'를 id로 불러오겠다.
+    console.dir(text);
+    // 콘솔로 디렉토리 확인
+
+    let hun = 100;
+    let center = "center";
+    // 변수는 사용하기 전에 지정/위치해둬야 오류가 나지 않는다.
+    // ==> hun이라는 변수는 40열에서 처음 사용되기때문에, 40열 이전에 위치해야 한다.
+
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+    
+    root.style.width = hun+'vw';
+    root.style.height = hun+'vh';
+    // root의 크기를 지정
+    
+    root.style.display = 'flex';
+    root.style.justifyContent = center;
+    root.style.alignItems = center;
+    // root를 부모로 두고있는 text를 정렬하기 위해 root에 flex를 설정해줬다.
+
+    
+    box.style.width = hun+'px';
+    box.style.height = hun+'px';
+    box.style.backgroundColor = 'gray';
+    box.style.borderRadius = hun/2+'px';
+    // box 스타일링 == 회색 동그라미
+    
+    // width/height/borderRadius를 지정할 때, 100이라는 변수가 있으면 공통으로 사용할 수 있을 것 같아서 숫자값 100을 변수 hun에 대입했다.
+
+    box.style.display = 'flex';
+    box.style.justifyContent = center;
+    box.style.alignItems = center;
+    // text변수를 정렬하기 위해 부모인 box에 flex를 대입함.
+    // 정렬을 하다보니 center라는 값이 반복되는 것 같아서 'center'변수를 만들어 'center'텍스트를 대입했다.
+    
+
+    text.innerText = 'div';
+    // p태그인 변수 text 안에 'div'라는 글씨를 보여주도록 하고싶다.
+    // 텍스트가 가운데에 정렬되지 않아 개발자도구를 확인해보니 설정하지 않은 마진값이 들어가 있었다.
+    // ==> style에 있는 alignItems를 alignitems라고 써서 가운데 정렬이 되지 않았던 것. alignItems라고 고쳐 쓰니 제대로 작동한다. 자바스크립트는 대소문자를 구분한다!
+
+
+
+</script>
+</body>
+</html>
